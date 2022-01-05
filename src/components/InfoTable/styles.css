@@ -1,0 +1,36 @@
+.table {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table h2, h3 {
+    text-align: center;
+    color: #004;
+}
+
+.preview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px #012;
+    margin: 16px 0;
+    padding: 8px;
+}
+
+.preview-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.emoji-font-preview {
+    font-size: 60px;
+    text-align: left;
+}

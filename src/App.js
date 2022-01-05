@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { EmojisList } from "./components/EmojisList";
+import { InfoTable } from "./components/InfoTable";
+import { getRandomEmoji } from "./helpers/getRandomEmoji";
 
 function App() {
+  const [selectedEmoji, selectEmoji] = React.useState();
+
+  const requestRandomEmoji = React.useCallback(async () => {
+    const emoji = await getRandomEmoji();
+    if (!selectedEmoji) {
+      selectEmoji(emoji);
+    }
+  }, [selectedEmoji]);
+
+  React.useEffect(requestRandomEmoji, []); //eslint-disable-line
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InfoTable emoji={selectedEmoji} />
+      <EmojisList />
     </div>
   );
 }
