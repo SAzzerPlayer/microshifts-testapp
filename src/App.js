@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import { EmojisList } from "./components/EmojisList";
 import { InfoTable } from "./components/InfoTable";
 import { getRandomEmoji } from "./helpers/getRandomEmoji";
+import { EmojisSelector } from "./components/EmojisSelector";
 
 function App() {
   const [selectedEmoji, selectEmoji] = React.useState();
@@ -14,12 +14,13 @@ function App() {
     }
   }, [selectedEmoji]);
 
+  //app starts with random emoji
   React.useEffect(requestRandomEmoji, []); //eslint-disable-line
 
   return (
     <div className="App">
       <InfoTable emoji={selectedEmoji} />
-      <EmojisList />
+      <EmojisSelector onSelectEmoji={selectEmoji} />
     </div>
   );
 }

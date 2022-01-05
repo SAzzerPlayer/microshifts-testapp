@@ -1,0 +1,15 @@
+.list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.select-line {
+    display: flex;
+    margin-left: 0.5em;
+}
+
+.select-line p {
+    font-weight: 600;
+    margin-right: 0.5em;
+}

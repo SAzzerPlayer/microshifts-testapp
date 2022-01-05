@@ -53,6 +53,6 @@ export const requestParamsDict = {
   },
 };
 
-export const getCategories = () => Object.keys(requestParamsDict);
+export const allCategories = Object.keys(requestParamsDict);
 export const getGroupsByCategory = (category) =>
   Object.values(requestParamsDict[category]);

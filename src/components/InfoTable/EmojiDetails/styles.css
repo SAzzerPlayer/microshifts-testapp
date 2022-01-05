@@ -1,0 +1,21 @@
+
+.details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px #012;
+    margin: 16px 0;
+    padding: 8px;
+}
+
+.details-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2em;
+}
+
+.details-emoji-font {
+    font-size: 64px;
+    text-align: center;
+}

@@ -1,0 +1,11 @@
+.select {
+    font-size: 14px;
+}
+
+.active {
+    font-weight: 600;
+}
+
+.inactive {
+    font-weight: 300;
+}
