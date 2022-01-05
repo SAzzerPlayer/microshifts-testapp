@@ -1,12 +1,17 @@
 import React from "react";
 
 export const EmojiView = React.memo(({ unicodes, className, label }) => {
-  const smile = unicodes.map((unicode) => {
-    const hexCode = unicode.split("U+")[1];
-    return String.fromCharCode(parseInt(hexCode, 16));
+  const codes = unicodes.map((unicode) => {
+    const code = unicode.split("U+")[1];
+    return parseInt(code, 16);
   });
+  const smile = String.fromCodePoint(...codes);
   return (
-    <span role={"img"} className={className} aria-label={label}>
+    <span
+      role={"img"}
+      className={className}
+      aria-label={label}
+    >
       {smile}
     </span>
   );
