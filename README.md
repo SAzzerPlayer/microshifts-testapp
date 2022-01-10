@@ -9,3 +9,10 @@ The API is based on a repository with a list of emoticons. URL: https://github.c
 
 The test project is an emojis explorer. In it, you can select an emoji and learn more about it. You can also filter
 emojis by category and group.
+
+______________________________________________
+
+## _Demo:_
+
+<img alt="microshifts-test-app" src="https://github.com/SAzzerPlayer/microshifts-testapp/blob/master/Demo.gif?raw=true" width="512" />
+
