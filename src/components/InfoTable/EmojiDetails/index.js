@@ -6,7 +6,7 @@ import "./styles.css";
 export const EmojiDetails = ({ unicode, name, category, group }) => (
   <div className={"details"}>
     <EmojiView
-      unicodes={unicode}
+      unicode={unicode}
       className={"details-emoji-font"}
       label={"details-emoji-font"}
     />

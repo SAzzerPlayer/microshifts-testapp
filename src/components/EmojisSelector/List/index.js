@@ -19,7 +19,7 @@ export const EmojisGroupList = ({ group, onSelect }) => {
           className={"emojis-list-item"}
           onClick={generateOnClick(emoji)}
         >
-          <EmojiView unicodes={emoji.unicode} label={emoji.name} />
+          <EmojiView unicode={emoji.unicode} label={emoji.name} />
         </div>
       ))}
     </div>
